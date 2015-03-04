@@ -347,7 +347,7 @@ private:
 		Alloc alloc(get_allocator);
 		T * head = alloc.allocate(n);
 		for (size_t i = 0; i < n; ++i) {
-			alloc.construct(head + i, value);
+			alloc.construct(head + i, arr[i]);
 		}
 		return head;
 	}
